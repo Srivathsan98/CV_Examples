@@ -1,0 +1,10 @@
+{
+    "ros.distro": "humble",
+    "files.associations": {
+        "array": "cpp",
+        "any": "cpp",
+        "string_view": "cpp",
+        "iostream": "cpp",
+        "functional": "cpp"
+    }
+}
