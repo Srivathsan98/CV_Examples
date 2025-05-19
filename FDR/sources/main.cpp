@@ -44,8 +44,9 @@ int main() {
                     std::cout << "Detection is already running." << std::endl;
                 }
             } else if (key == 'r') {
-                if (detection_active) {
+                // if (detection_active) {
                     if (!recognition_active) {
+                        face_detection.detectFaces(false); // Stop detection for recognition
                         // Start face recognition in a new thread
                         recognition_thread = std::thread([&face_recognition]() {
                             face_recognition.facerecognition(true);
@@ -56,9 +57,9 @@ int main() {
                     } else {
                         std::cout << "Recognition is already running." << std::endl;
                     }
-                } else {
-                    std::cout << "Please start detection first." << std::endl;
-                }
+                // } else {
+                //     std::cout << "Please start detection first." << std::endl;
+                // }
             } else if (key == 'q') {
                 if (recognition_active && recognition_thread.joinable()) {
                     recognition_thread.join();

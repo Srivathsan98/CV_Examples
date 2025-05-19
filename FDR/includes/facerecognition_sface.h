@@ -26,20 +26,24 @@ private:
     FaceDetectionYunet& face_detector; // Reference to face detector
     std::mutex frame_mutex; // Mutex for thread-safe frame access
     cv::Size input_size = cv::Size(320, 320); // Input size for the model
-    float conf_threshold = 0.6f;
+    float conf_threshold = 0.9f;
     float nms_threshold = 0.3f;
     int top_k = 5000;
     int backend_id = 0; // 0 for OpenCV, 1 for OpenVINO, 2 for CUDA
     int target_id = 0; // 0 for CPU, 1 for GPU
     int distance_type = 0; // 0 for L2, 1 for Cosine
-    double threshold_cosine = 0.363;
-    double threshold_norml2 = 1.128;
+    double threshold_cosine = 0.363;  // Increased for stricter matching
+    double threshold_norml2 = 1.128;  // Decreased for stricter matching
     cv::Mat infer_recog_frames;
     cv::Mat resultant_recognition_frame;
     cv::Mat recog_frame;
     cv::Mat target_image;
     cv::Mat target_face;
-    cv::Mat draw_frame_box(const cv::Mat& image, const cv::Mat& result, float fps = -1.0f);
+    cv::Mat draw_frame_box(const cv::Mat& image, const cv::Mat& result, float fps = -1.0f, bool is_recognition = false);
+    int x;
+    int y;
+    int w;
+    int h;
 
 };
 
