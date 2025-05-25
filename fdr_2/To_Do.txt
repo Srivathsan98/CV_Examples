@@ -1,0 +1,4 @@
+1. a switch case to sdwitch between detection and recognition
+2. to see how to provide the auto facedetector to facerecognition from main itself
+3. to have the whole recognition code in facerecognition and only call it in the while loop in main.cpp and then visualize it
+4. add function for targetdetection in facedetedct.cpp
