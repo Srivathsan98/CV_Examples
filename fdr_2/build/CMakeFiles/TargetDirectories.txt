@@ -1,0 +1,3 @@
+/home/pvsp/OpenCV_GST_Practice/CV/fdr_2/build/CMakeFiles/FaceDetectionRecognition.dir
+/home/pvsp/OpenCV_GST_Practice/CV/fdr_2/build/CMakeFiles/edit_cache.dir
+/home/pvsp/OpenCV_GST_Practice/CV/fdr_2/build/CMakeFiles/rebuild_cache.dir
